@@ -1,0 +1,61 @@
+@import './index.orgi';
+// Modified by Lu Jinkai
+
+.main-inner > .sub-menu:not(:first-child):not(.sub-menu), .main-inner > .post-block:not(:first-child):not(.sub-menu), .main-inner > .tabs-comment:not(:first-child):not(.sub-menu), .main-inner > .comments:not(:first-child):not(.sub-menu), .main-inner > .pagination:not(:first-child):not(.sub-menu) {
+    margin-top: 0px;
+}
+.ljk-index-post-block {
+    padding: 12px 20px;    // 这里写死了，不太好，post-block是自适应的
+    .post-header {
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .post-header .post-title {
+        font-size: 1em;
+        // white-space:nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+    }
+    .post-header .post-meta-container {
+        font-size: 0.4em;
+        margin-top: 0px;
+        .post-meta {
+            justify-content: flex-start;
+            .post-meta-item-icon,.post-meta-item-text{
+                display:none;    
+            }
+            .post-meta-item {
+                time {
+                    cursor: default;
+                }
+                time[itemprop="dateModified"] {
+                    display: none;
+                }
+                &::before {
+                    content: '';
+                    margin: 0 ;
+                }
+                &:last-child a {
+                    color: #999;
+                    &:hover {
+                        color: #888;
+                    }
+                }
+                &:last-child::before {
+                    content: '|';
+                    margin: 0 0.2em 0 0.6em;
+                }
+                &:first-child::before {
+                    display:none;
+                }
+            } 
+        }
+    }
+    .post-body {
+        display: none;
+    }
+}
+
+.pagination {
+    margin: 0;
+}
