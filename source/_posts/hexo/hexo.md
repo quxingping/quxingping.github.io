@@ -3,7 +3,7 @@ title: hexo
 tags:
   - hexo
 categories:
-  - hexo
+  - node
 date: 2021-05-19 11:22:12
 ---
 
@@ -41,8 +41,6 @@ git commit -m "hexo files"
 git push
 ```
 
-
-
 ## 更新维护
 
 1. clone 分支到本地。
@@ -57,9 +55,6 @@ git push
    hexo d -g 或者需要hexo clean
    ```
 
-   
-
-   
 
 **注意：**
 
