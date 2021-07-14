@@ -3,15 +3,15 @@ title: hexo
 tags:
   - hexo
 categories:
-  - node
+  - hexo
 date: 2021-05-19 11:22:12
 ---
 
-## 部署
+### 部署
 
 参考官方文档
 
-## 更新提交到GitHub
+### 更新提交到GitHub
 
 ***解决在不同电脑更新博客***
 
@@ -41,7 +41,7 @@ git commit -m "hexo files"
 git push
 ```
 
-## 更新维护
+### 更新维护
 
 1. clone 分支到本地。
 
@@ -59,6 +59,10 @@ git push
 **注意：**
 
 在更新时先git pull 一下。
+
+
+
+参考：[](https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
 
 
 
