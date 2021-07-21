@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>golang</title>
+    <url>/2021/05/19/golang/golang/</url>
+    <content><![CDATA[<h2 id="2021年7月14日23-57-39"><a href="#2021年7月14日23-57-39" class="headerlink" title="2021年7月14日23:57:39"></a>2021年7月14日23:57:39</h2>]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>golang</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo</title>
+    <url>/2021/05/19/hexo/hexo/</url>
+    <content><![CDATA[<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>参考官方文档</p>
+<h3 id="更新提交到GitHub"><a href="#更新提交到GitHub" class="headerlink" title="更新提交到GitHub"></a>更新提交到GitHub</h3><p><em><strong>解决在不同电脑更新博客</strong></em></p>
+<p>利用git分支实现，hexo生成的静态文件放到master分支，hexo源文件放到hexo分支上。直接git clone hexo 分支。</p>
+<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><p>在GitHub的仓库（quxingping.github.io）新建一个分支，并切换到该分支，并在仓库设置中Branches-Default branch中将默认分支设置一个分支名，保存。</p>
+<h4 id="首次提交到分支"><a href="#首次提交到分支" class="headerlink" title="首次提交到分支"></a>首次提交到分支</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone 分支</span><br><span class="line">git branch 确认分支正确</span><br><span class="line">将本地部署的文件全部拷贝进username.github.io</span><br><span class="line">进入username.github.io文件下，将全部文件提交到分支</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong><br>将themes目录中的.git目录删除，一个仓库中不能包含其他git仓库，否则会失败。</p>
+<p><strong>提交：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;hexo files&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新维护"><a href="#更新维护" class="headerlink" title="更新维护"></a>更新维护</h3><ol>
+<li><p>clone 分支到本地。</p>
+</li>
+<li><p>进入username.github.io目录，npm install </p>
+</li>
+<li><p>编辑后提交源码。</p>
+</li>
+<li><p>更新博客。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d -g 或者需要hexo clean</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>注意：</strong></p>
+<p>在更新时先git pull 一下。</p>
+<p>参考：<a href="https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation">https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python</title>
+    <url>/2021/05/19/python/demo/</url>
+    <content><![CDATA[<h2 id="2222"><a href="#2222" class="headerlink" title="2222"></a>2222</h2><p>111</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+</search>
