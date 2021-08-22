@@ -3,7 +3,14 @@
   <entry>
     <title>golang</title>
     <url>/2021/05/19/golang/golang/</url>
-    <content><![CDATA[<h2 id="2021年7月14日23-57-39"><a href="#2021年7月14日23-57-39" class="headerlink" title="2021年7月14日23:57:39"></a>2021年7月14日23:57:39</h2>]]></content>
+    <content><![CDATA[<h5 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a><em><strong>跨平台编译</strong></em></h5><p><strong>linux 64</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">0</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>linux</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span>amd64</span><br><span class="line">go build </span><br></pre></td></tr></table></figure>
+
+<p><strong>windows</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">1</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>windows</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span></span><br><span class="line">go build    </span><br></pre></td></tr></table></figure>
+
+<h5 id="panic错误重定向到日志文件"><a href="#panic错误重定向到日志文件" class="headerlink" title="panic错误重定向到日志文件"></a>panic错误重定向到日志文件</h5><p><code>https://zhuanlan.zhihu.com/p/245369778</code></p>
+]]></content>
       <categories>
         <category>golang</category>
       </categories>
@@ -36,7 +43,7 @@
 </ol>
 <p><strong>注意：</strong></p>
 <p>在更新时先git pull 一下。</p>
-<p>参考：<a href="https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation">https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+<p>参考:<a href="https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation">https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -46,15 +53,17 @@
       </tags>
   </entry>
   <entry>
-    <title>python</title>
-    <url>/2021/05/19/python/demo/</url>
-    <content><![CDATA[<h2 id="2222"><a href="#2222" class="headerlink" title="2222"></a>2222</h2><p>111</p>
+    <title>备忘录</title>
+    <url>/2021/05/19/bj/bj/</url>
+    <content><![CDATA[<h4 id="Typora图片左设置"><a href="#Typora图片左设置" class="headerlink" title="Typora图片左设置"></a>Typora图片左设置</h4><p>添加主题css样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &gt; <span class="selector-class">.md-image</span><span class="selector-pseudo">:only-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.md-img-error</span>) <span class="selector-tag">img</span>, <span class="selector-tag">p</span> &gt; <span class="selector-tag">img</span><span class="selector-pseudo">:only-child</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">margin</span>: inherit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>bj</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>备忘录</tag>
       </tags>
   </entry>
 </search>
