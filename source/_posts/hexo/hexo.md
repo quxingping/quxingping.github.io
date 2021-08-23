@@ -56,10 +56,8 @@ git push
    ```
 
 
-**注意：**
+**注意**
 
 在更新时先git pull 一下。
 
-
-
-参考:[https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation](https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
+[https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation](https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
