@@ -67,39 +67,33 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2021/08/24/Linux/Linux/</url>
-    <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">title: Linux</span><br><span class="line">tags:</span><br><span class="line">  - Linux</span><br><span class="line">categories:</span><br><span class="line">  - Linux</span><br><span class="line">date: 2020-08-19</span><br></pre></td></tr></table></figure>
+    <title>Linux</title>
+    <url>/2020/08/19/Linux/Linux/</url>
+    <content><![CDATA[<h3 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h3><h4 id="iptables启用关闭"><a href="#iptables启用关闭" class="headerlink" title="****iptables启用关闭"></a>****iptables启用关闭</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables stop *停止服务 </span><br><span class="line">service iptables start *开启服务</span><br><span class="line">service iptables status *查看iptables状态</span><br></pre></td></tr></table></figure>
 
-
-
-<p>***iptables</p>
-<p>****iptables启用关闭</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables stop *停止服务 </span><br><span class="line">service iptables start *开启服务</span><br><span class="line">service iptables status *查看iptables状态</span><br></pre></td></tr></table></figure>
-
-<p>****清除防火墙规则</p>
-<p>远程操作慎重，操作前关闭iptables服务。单独执行iptables -F 远程连接会断开，可以写在脚本执行。</p>
+<h4 id="清除防火墙规则"><a href="#清除防火墙规则" class="headerlink" title="****清除防火墙规则"></a>****清除防火墙规则</h4><p>远程操作慎重，操作前关闭iptables服务。单独执行iptables -F 远程连接会断开，可以写在脚本执行。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -F</span><br><span class="line">iptables -X</span><br><span class="line">iptables -Z</span><br></pre></td></tr></table></figure>
 
-<p>****添加白名单</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/sbin/iptables -A INPUT -s 120.92.8.171 -p TCP -m multiport --dport 80:81,1935:1936,443 -j ACCEPT</span><br></pre></td></tr></table></figure>
+<h4 id="添加白名单"><a href="#添加白名单" class="headerlink" title="****添加白名单"></a>****添加白名单</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/sbin/iptables -A INPUT -s 120.92.8.171 -p TCP -m multiport --dport 80:81,1935:1936,443 -j ACCEPT</span><br></pre></td></tr></table></figure>
 
-<p>****保存配置</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables save</span><br></pre></td></tr></table></figure>
+<h4 id="保存配置"><a href="#保存配置" class="headerlink" title="****保存配置"></a>****保存配置</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables save</span><br></pre></td></tr></table></figure>
 
-<p>****查看白名单</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -L -n</span><br></pre></td></tr></table></figure>
+<h4 id="查看白名单"><a href="#查看白名单" class="headerlink" title="****查看白名单"></a>****查看白名单</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -L -n</span><br></pre></td></tr></table></figure>
 
-<p>****centos7中防火墙操作</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld.service *启动服务</span><br><span class="line">systemctl stop firewalld.service  *关闭服务</span><br><span class="line">systemctl start firewalld  *启动</span><br><span class="line">systemctl status firewalld *查看状态： </span><br><span class="line">systemctl disable firewalld *中止</span><br><span class="line">systemctl stop firewalld  *禁用</span><br><span class="line">systemctl restart firewalld.service *重启服务</span><br><span class="line">systemctl status firewalld.service *服务的状态</span><br><span class="line">systemctl enable firewalld.service *在开机时启用一个服务</span><br><span class="line">systemctl disable firewalld.service *在开机时禁用一个服务</span><br><span class="line">systemctl is-enabled firewalld.service *查看服务是否开机启动</span><br><span class="line">systemctl list-unit-files|grep enabled *查看已启动的服务列表</span><br><span class="line">systemctl --failed *查看启动失败的服务列表</span><br><span class="line">firewall-cmd --version  *查看版本</span><br><span class="line">firewall-cmd --help  *查看帮助</span><br><span class="line">firewall-cmd --state *显示状态</span><br><span class="line">firewall-cmd --zone=public --list-ports  *查看全部打开的端口</span><br><span class="line">firewall-cmd --reload  *更新防火墙规则</span><br><span class="line">firewall-cmd --get-active-zones  *查看区域信息</span><br><span class="line">firewall-cmd --get-zone-of-interface=eth0  *查看指定接口所属区域</span><br><span class="line">firewall-cmd --panic-on  *拒绝全部包</span><br><span class="line">firewall-cmd --panic-off  *取消拒绝状态</span><br><span class="line">firewall-cmd --query-panic  *查看是否拒绝</span><br></pre></td></tr></table></figure>
+<h4 id="centos7中防火墙操作"><a href="#centos7中防火墙操作" class="headerlink" title="****centos7中防火墙操作"></a>****centos7中防火墙操作</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld.service *启动服务</span><br><span class="line">systemctl stop firewalld.service  *关闭服务</span><br><span class="line">systemctl start firewalld  *启动</span><br><span class="line">systemctl status firewalld *查看状态： </span><br><span class="line">systemctl disable firewalld *中止</span><br><span class="line">systemctl stop firewalld  *禁用</span><br><span class="line">systemctl restart firewalld.service *重启服务</span><br><span class="line">systemctl status firewalld.service *服务的状态</span><br><span class="line">systemctl enable firewalld.service *在开机时启用一个服务</span><br><span class="line">systemctl disable firewalld.service *在开机时禁用一个服务</span><br><span class="line">systemctl is-enabled firewalld.service *查看服务是否开机启动</span><br><span class="line">systemctl list-unit-files|grep enabled *查看已启动的服务列表</span><br><span class="line">systemctl --failed *查看启动失败的服务列表</span><br><span class="line">firewall-cmd --version  *查看版本</span><br><span class="line">firewall-cmd --help  *查看帮助</span><br><span class="line">firewall-cmd --state *显示状态</span><br><span class="line">firewall-cmd --zone=public --list-ports  *查看全部打开的端口</span><br><span class="line">firewall-cmd --reload  *更新防火墙规则</span><br><span class="line">firewall-cmd --get-active-zones  *查看区域信息</span><br><span class="line">firewall-cmd --get-zone-of-interface=eth0  *查看指定接口所属区域</span><br><span class="line">firewall-cmd --panic-on  *拒绝全部包</span><br><span class="line">firewall-cmd --panic-off  *取消拒绝状态</span><br><span class="line">firewall-cmd --query-panic  *查看是否拒绝</span><br></pre></td></tr></table></figure>
 
-<p>****centos7中使用iptables</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install iptables-services *安装或更新服务</span><br><span class="line">systemctl enable iptables *启动iptables</span><br><span class="line">systemctl start iptables *打开iptables</span><br><span class="line">service iptables save  *保存配置</span><br><span class="line">service iptables restart *启用iptables</span><br></pre></td></tr></table></figure>
+<h4 id="centos7中使用iptables"><a href="#centos7中使用iptables" class="headerlink" title="****centos7中使用iptables"></a>****centos7中使用iptables</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install iptables-services *安装或更新服务</span><br><span class="line">systemctl enable iptables *启动iptables</span><br><span class="line">systemctl start iptables *打开iptables</span><br><span class="line">service iptables save  *保存配置</span><br><span class="line">service iptables restart *启用iptables</span><br></pre></td></tr></table></figure>
 
 
 
 
 
 ]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
 </search>
