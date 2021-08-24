@@ -20,7 +20,7 @@
   </entry>
   <entry>
     <title>hexo</title>
-    <url>/2021/05/19/hexo/hexo/</url>
+    <url>/2020/05/19/hexo/hexo/</url>
     <content><![CDATA[<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>参考官方文档</p>
 <h3 id="更新提交到GitHub"><a href="#更新提交到GitHub" class="headerlink" title="更新提交到GitHub"></a>更新提交到GitHub</h3><p><em><strong>解决在不同电脑更新博客</strong></em></p>
 <p>利用git分支实现，hexo生成的静态文件放到master分支，hexo源文件放到hexo分支上。直接git clone hexo 分支。</p>
@@ -41,9 +41,9 @@
 <li><p>更新博客。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d -g 或者需要hexo clean</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p><strong>注意：</strong></p>
+<p><strong>注意</strong></p>
 <p>在更新时先git pull 一下。</p>
-<p>参考:<a href="https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation">https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+<p><a href="https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation">https://www.jianshu.com/p/0b1fccce74e0?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -54,7 +54,7 @@
   </entry>
   <entry>
     <title>备忘录</title>
-    <url>/2021/05/19/bj/bj/</url>
+    <url>/2020/05/19/bj/bj/</url>
     <content><![CDATA[<h4 id="Typora图片左设置"><a href="#Typora图片左设置" class="headerlink" title="Typora图片左设置"></a>Typora图片左设置</h4><p>添加主题css样式</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &gt; <span class="selector-class">.md-image</span><span class="selector-pseudo">:only-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.md-img-error</span>) <span class="selector-tag">img</span>, <span class="selector-tag">p</span> &gt; <span class="selector-tag">img</span><span class="selector-pseudo">:only-child</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">margin</span>: inherit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -65,5 +65,41 @@
       <tags>
         <tag>备忘录</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/08/24/Linux/Linux/</url>
+    <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">title: Linux</span><br><span class="line">tags:</span><br><span class="line">  - Linux</span><br><span class="line">categories:</span><br><span class="line">  - Linux</span><br><span class="line">date: 2020-08-19</span><br></pre></td></tr></table></figure>
+
+
+
+<p>***iptables</p>
+<p>****iptables启用关闭</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables stop *停止服务 </span><br><span class="line">service iptables start *开启服务</span><br><span class="line">service iptables status *查看iptables状态</span><br></pre></td></tr></table></figure>
+
+<p>****清除防火墙规则</p>
+<p>远程操作慎重，操作前关闭iptables服务。单独执行iptables -F 远程连接会断开，可以写在脚本执行。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -F</span><br><span class="line">iptables -X</span><br><span class="line">iptables -Z</span><br></pre></td></tr></table></figure>
+
+<p>****添加白名单</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/sbin/iptables -A INPUT -s 120.92.8.171 -p TCP -m multiport --dport 80:81,1935:1936,443 -j ACCEPT</span><br></pre></td></tr></table></figure>
+
+<p>****保存配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables save</span><br></pre></td></tr></table></figure>
+
+<p>****查看白名单</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -L -n</span><br></pre></td></tr></table></figure>
+
+<p>****centos7中防火墙操作</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld.service *启动服务</span><br><span class="line">systemctl stop firewalld.service  *关闭服务</span><br><span class="line">systemctl start firewalld  *启动</span><br><span class="line">systemctl status firewalld *查看状态： </span><br><span class="line">systemctl disable firewalld *中止</span><br><span class="line">systemctl stop firewalld  *禁用</span><br><span class="line">systemctl restart firewalld.service *重启服务</span><br><span class="line">systemctl status firewalld.service *服务的状态</span><br><span class="line">systemctl enable firewalld.service *在开机时启用一个服务</span><br><span class="line">systemctl disable firewalld.service *在开机时禁用一个服务</span><br><span class="line">systemctl is-enabled firewalld.service *查看服务是否开机启动</span><br><span class="line">systemctl list-unit-files|grep enabled *查看已启动的服务列表</span><br><span class="line">systemctl --failed *查看启动失败的服务列表</span><br><span class="line">firewall-cmd --version  *查看版本</span><br><span class="line">firewall-cmd --help  *查看帮助</span><br><span class="line">firewall-cmd --state *显示状态</span><br><span class="line">firewall-cmd --zone=public --list-ports  *查看全部打开的端口</span><br><span class="line">firewall-cmd --reload  *更新防火墙规则</span><br><span class="line">firewall-cmd --get-active-zones  *查看区域信息</span><br><span class="line">firewall-cmd --get-zone-of-interface=eth0  *查看指定接口所属区域</span><br><span class="line">firewall-cmd --panic-on  *拒绝全部包</span><br><span class="line">firewall-cmd --panic-off  *取消拒绝状态</span><br><span class="line">firewall-cmd --query-panic  *查看是否拒绝</span><br></pre></td></tr></table></figure>
+
+<p>****centos7中使用iptables</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install iptables-services *安装或更新服务</span><br><span class="line">systemctl enable iptables *启动iptables</span><br><span class="line">systemctl start iptables *打开iptables</span><br><span class="line">service iptables save  *保存配置</span><br><span class="line">service iptables restart *启用iptables</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
   </entry>
 </search>
