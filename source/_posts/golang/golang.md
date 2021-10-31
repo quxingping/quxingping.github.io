@@ -3,7 +3,7 @@ title: golang
 tags:
   - golang
 categories:
-  - golang
+  - Golang
 date: 2021-05-19 11:22:12
 ---
 
