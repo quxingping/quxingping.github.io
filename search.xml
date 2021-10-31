@@ -141,7 +141,7 @@
       </tags>
   </entry>
   <entry>
-    <title>golang</title>
+    <title>Golang</title>
     <url>/2021/05/19/Golang/Golang/</url>
     <content><![CDATA[<h5 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a><em><strong>跨平台编译</strong></em></h5><p><strong>linux 64</strong></p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">0</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>linux</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span>amd64</span><br><span class="line">go build </span><br></pre></td></tr></table></figure>
@@ -155,7 +155,7 @@
         <category>Golang</category>
       </categories>
       <tags>
-        <tag>golang</tag>
+        <tag>Golang</tag>
       </tags>
   </entry>
 </search>
