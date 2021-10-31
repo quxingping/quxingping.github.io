@@ -1,5 +1,5 @@
 ---
-title: Linux
+title: Python
 tags:
   - Python
 categories:
