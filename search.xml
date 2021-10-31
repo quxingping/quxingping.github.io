@@ -141,8 +141,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Golang</title>
-    <url>/2021/05/19/Golang/Golang/</url>
+    <title>golang</title>
+    <url>/2021/05/19/golang/golang/</url>
     <content><![CDATA[<h5 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a><em><strong>跨平台编译</strong></em></h5><p><strong>linux 64</strong></p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">0</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>linux</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span>amd64</span><br><span class="line">go build </span><br></pre></td></tr></table></figure>
 
@@ -152,10 +152,10 @@
 <h5 id="panic错误重定向到日志文件"><a href="#panic错误重定向到日志文件" class="headerlink" title="panic错误重定向到日志文件"></a>panic错误重定向到日志文件</h5><p><code>https://zhuanlan.zhihu.com/p/245369778</code></p>
 ]]></content>
       <categories>
-        <category>Golang</category>
+        <category>golang</category>
       </categories>
       <tags>
-        <tag>Golang</tag>
+        <tag>golang</tag>
       </tags>
   </entry>
 </search>
