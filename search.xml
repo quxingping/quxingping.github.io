@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>golang</title>
-    <url>/2021/05/19/golang/golang/</url>
-    <content><![CDATA[<h5 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a><em><strong>跨平台编译</strong></em></h5><p><strong>linux 64</strong></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">0</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>linux</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span>amd64</span><br><span class="line">go build </span><br></pre></td></tr></table></figure>
-
-<p><strong>windows</strong></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">1</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>windows</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span></span><br><span class="line">go build    </span><br></pre></td></tr></table></figure>
-
-<h5 id="panic错误重定向到日志文件"><a href="#panic错误重定向到日志文件" class="headerlink" title="panic错误重定向到日志文件"></a>panic错误重定向到日志文件</h5><p><code>https://zhuanlan.zhihu.com/p/245369778</code></p>
-]]></content>
-      <categories>
-        <category>golang</category>
-      </categories>
-      <tags>
-        <tag>golang</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo</title>
     <url>/2020/05/19/hexo/hexo/</url>
     <content><![CDATA[<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>参考官方文档</p>
@@ -69,7 +51,15 @@
   <entry>
     <title>Linux</title>
     <url>/2020/08/19/Linux/Linux/</url>
-    <content><![CDATA[<h3 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h3><h4 id="iptables启用关闭"><a href="#iptables启用关闭" class="headerlink" title="iptables启用关闭"></a>iptables启用关闭</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables stop *停止服务 </span><br><span class="line">service iptables start *开启服务</span><br><span class="line">service iptables status *查看iptables状态</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="查看系统信息"></a>查看系统信息</h3><h5 id="查看系统版本信息"><a href="#查看系统版本信息" class="headerlink" title="查看系统版本信息"></a>查看系统版本信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /proc/version</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看内核信息"><a href="#查看内核信息" class="headerlink" title="查看内核信息"></a>查看内核信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">uname -a </span><br></pre></td></tr></table></figure>
+
+<h5 id="查看系统发行信息"><a href="#查看系统发行信息" class="headerlink" title="查看系统发行信息"></a>查看系统发行信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /etc/issue 或 cat /etc/centos-release</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看CPU相关信息"><a href="#查看CPU相关信息" class="headerlink" title="查看CPU相关信息"></a>查看CPU相关信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /etc/cpuinfo</span><br></pre></td></tr></table></figure>
+
+<h3 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h3><h4 id="iptables启用关闭"><a href="#iptables启用关闭" class="headerlink" title="iptables启用关闭"></a>iptables启用关闭</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service iptables stop *停止服务 </span><br><span class="line">service iptables start *开启服务</span><br><span class="line">service iptables status *查看iptables状态</span><br></pre></td></tr></table></figure>
 
 <h4 id="清除防火墙规则"><a href="#清除防火墙规则" class="headerlink" title="清除防火墙规则"></a>清除防火墙规则</h4><p>远程操作慎重，操作前关闭iptables服务。单独执行iptables -F 远程连接会断开，可以写在脚本执行。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -F</span><br><span class="line">iptables -X</span><br><span class="line">iptables -Z</span><br></pre></td></tr></table></figure>
@@ -94,6 +84,78 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>golang</title>
+    <url>/2021/05/19/Golang/golang/</url>
+    <content><![CDATA[<h5 id="跨平台编译"><a href="#跨平台编译" class="headerlink" title="跨平台编译"></a><em><strong>跨平台编译</strong></em></h5><p><strong>linux 64</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">0</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>linux</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span>amd64</span><br><span class="line">go build </span><br></pre></td></tr></table></figure>
+
+<p><strong>windows</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SET</span> CGO_ENABLED<span class="operator">=</span><span class="number">1</span></span><br><span class="line"><span class="keyword">SET</span> GOOS<span class="operator">=</span>windows</span><br><span class="line"><span class="keyword">SET</span> GOARCH<span class="operator">=</span></span><br><span class="line">go build    </span><br></pre></td></tr></table></figure>
+
+<h5 id="panic错误重定向到日志文件"><a href="#panic错误重定向到日志文件" class="headerlink" title="panic错误重定向到日志文件"></a>panic错误重定向到日志文件</h5><p><code>https://zhuanlan.zhihu.com/p/245369778</code></p>
+]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>golang</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux</title>
+    <url>/2020/08/19/Python/Python/</url>
+    <content><![CDATA[<p>pip install pipreqs</p>
+<p>生成安装文件</p>
+<p>pipreqs ./</p>
+<p>安装生成的requirment.txt</p>
+<p>pip install -r requirment.txt</p>
+<h6 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h6><p>内部函数使用了外部函数的局部变量，就是闭包。</p>
+<p>特点，变量不被污染，局部变量常驻内存。</p>
+<p>判断是不是闭包__ <strong>closure</strong>__</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wraper</span>():</span></span><br><span class="line">    name = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span>():</span></span><br><span class="line">        <span class="keyword">return</span> name</span><br><span class="line">    <span class="built_in">print</span>(inner.__closure__)</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line">wraper()()</span><br><span class="line"><span class="comment">#(&lt;cell at 0x00000276A0019F48: int object at 0x00007FFF54927110&gt;,)</span></span><br><span class="line"><span class="comment">#能打印出来对象就是闭包，</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h6><p>可迭代的不一定是迭代器，迭代器都是可迭代的。</p>
+<h6 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h6><p>本质就是迭代器。</p>
+<p>1，生成器函数，关键字yeiled</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):</span><br><span class="line">        a = <span class="keyword">yield</span> i</span><br><span class="line">        <span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(test().__next__())</span><br><span class="line"><span class="built_in">print</span>(test().__next__())</span><br><span class="line"><span class="comment">#拿到所有的数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> test():</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="comment">#给上次的yeild赋值</span></span><br><span class="line">ts =test()</span><br><span class="line"><span class="built_in">print</span>(ts.__next__())</span><br><span class="line">ts.__next__()</span><br><span class="line">ts.send(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<!--<u>生成器函数执行后返回的是生成器，不是执行函数。</u>-->
+
+<h6 id="subprocess"><a href="#subprocess" class="headerlink" title="subprocess"></a>subprocess</h6><p>subprocess模块的作用，即允许你去创建一个新的进程让其执行另外的程序，并与它进行通信，获取标准的输入，标准输出，标准错误以及返回码等等。</p>
+<p>subprocess模块中定义了一个Popen类，通过它可以来创建进程，并与其进行复杂的交互。</p>
+<p>参数说明</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, args, bufsize=-<span class="number">1</span>, executable=<span class="literal">None</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                 stdin=<span class="literal">None</span>, stdout=<span class="literal">None</span>, stderr=<span class="literal">None</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                 preexec_fn=<span class="literal">None</span>, close_fds=<span class="literal">True</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                 shell=<span class="literal">False</span>, cwd=<span class="literal">None</span>, env=<span class="literal">None</span>, universal_newlines=<span class="literal">None</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                 startupinfo=<span class="literal">None</span>, creationflags=<span class="number">0</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                 restore_signals=<span class="literal">True</span>, start_new_session=<span class="literal">False</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                 pass_fds=(<span class="params"></span>), *, encoding=<span class="literal">None</span>, errors=<span class="literal">None</span>, text=<span class="literal">None</span></span>):</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>agrs</p>
+<p>必须是一个字符串或者序列类型（列表，元组），哦用于指定进程的执行文件及其参数。如果是一个序列类型参数，则序列的第一个元素通常是可执行文件路径。</p>
+</li>
+<li><p>stdin stdout stderr</p>
+<p>标准输入，输出，错误。</p>
+</li>
+<li><p>shell</p>
+<p>程序设定为shell执行</p>
+</li>
+<li><p>env</p>
+<p>描述环境变量，如果为None，继承父进程的环境。</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    res = subprocess.Popen(<span class="string">&quot;dir&quot;</span>,cwd=<span class="string">&quot;d:&quot;</span>,</span><br><span class="line">                           stdout=subprocess.PIPE,<span class="comment">#输出从管道获取</span></span><br><span class="line">                           stderr=subprocess.STDOUT,<span class="comment">#错误输入由输</span></span><br><span class="line">                           )</span><br><span class="line">    sout,serr =res.communicate()</span><br><span class="line">    <span class="keyword">return</span> res.returncode,sout,serr,res.pid</span><br><span class="line">code,sout,serr,pid = test()</span><br><span class="line"><span class="built_in">print</span>(code,serr,pid,sout)</span><br></pre></td></tr></table></figure>
+
+<p>Pipe封装</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoopException</span>(<span class="params">Exception</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;循环异常自定义异常，此异常并不代表循环每一次都是非正常退出的&quot;&quot;&quot;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,msg=<span class="string">&quot;LoopException&quot;</span></span>):</span></span><br><span class="line">        self._msg=msg</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self._msg</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SwPipe</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    与任意子进程通信管道类，可以进行管道交互通信</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,commande,func,exitfunc,readyfunc=<span class="literal">None</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">        shell=<span class="literal">True</span>,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,code=<span class="string">&quot;GBK&quot;</span></span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        commande 命令</span></span><br><span class="line"><span class="string">        func 正确输出反馈函数</span></span><br><span class="line"><span class="string">        exitfunc 异常反馈函数</span></span><br><span class="line"><span class="string">        readyfunc 当管道创建完毕时调用</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self._thread = threading.Thread(target=self.__run,args=(commande,shell,stdin,stdout,stderr,readyfunc))</span><br><span class="line">        self._code = code</span><br><span class="line">        self._func = func</span><br><span class="line">        self._exitfunc = exitfunc</span><br><span class="line">        self._flag = <span class="literal">False</span></span><br><span class="line">        self._CRFL = <span class="string">&quot;\r\n&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__run</span>(<span class="params">self,commande,shell,stdin,stdout,stderr,readyfunc</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot; 私有函数 &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self._process = subprocess.Popen(</span><br><span class="line">                commande,</span><br><span class="line">                shell=shell,</span><br><span class="line">                stdin=stdin,</span><br><span class="line">                stdout=stdout,</span><br><span class="line">                stderr=stderr</span><br><span class="line">                )</span><br><span class="line">        <span class="keyword">except</span> OSError <span class="keyword">as</span> e:</span><br><span class="line">            self._exitfunc(e)</span><br><span class="line">        fun = self._process.stdout.readline</span><br><span class="line">        self._flag = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> readyfunc != <span class="literal">None</span>:</span><br><span class="line">            threading.Thread(target=readyfunc).start() <span class="comment">#准备就绪</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            line = fun()</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> line:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                tmp = line.decode(self._code)</span><br><span class="line">            <span class="keyword">except</span> UnicodeDecodeError:</span><br><span class="line">                tmp =  \</span><br><span class="line">                self._CRFL + <span class="string">&quot;[PIPE_CODE_ERROR] &lt;Code ERROR: UnicodeDecodeError&gt;\n&quot;</span></span><br><span class="line">                + <span class="string">&quot;[PIPE_CODE_ERROR] Now code is: &quot;</span> + self._code + self._CRFL</span><br><span class="line">            self._func(self,tmp)</span><br><span class="line"></span><br><span class="line">        self._flag = <span class="literal">False</span></span><br><span class="line">        self._exitfunc(LoopException(<span class="string">&quot;While Loop break&quot;</span>))   <span class="comment">#正常退出</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">write</span>(<span class="params">self,msg</span>):</span></span><br><span class="line">        <span class="keyword">if</span> self._flag:</span><br><span class="line">            <span class="comment">#请注意一下这里的换行</span></span><br><span class="line">            self._process.stdin.write((msg + self._CRFL).encode(self._code))</span><br><span class="line">            self._process.stdin.flush()</span><br><span class="line">            <span class="comment">#sys.stdin.write(msg)#怎么说呢，无法直接用代码发送指令，只能默认的stdin</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> LoopException(<span class="string">&quot;Shell pipe error from &#x27;_flag&#x27; not True!&quot;</span>)  <span class="comment">#还未准备好就退出</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">start</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot; 开始线程 &quot;&quot;&quot;</span></span><br><span class="line">        self._thread.start()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">destroy</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot; 停止并销毁自身 &quot;&quot;&quot;</span></span><br><span class="line">        process.stdout.close()</span><br><span class="line">        self._thread.stop()</span><br><span class="line">        <span class="keyword">del</span> self</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:   <span class="comment">#那么我们来开始使用它吧</span></span><br><span class="line">    e = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#反馈函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">event</span>(<span class="params">cls,line</span>):</span><span class="comment">#输出反馈函数</span></span><br><span class="line">        sys.stdout.write(line)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">exit</span>(<span class="params">msg</span>):</span><span class="comment">#退出反馈函数</span></span><br><span class="line">        <span class="built_in">print</span>(msg)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ready</span>():</span><span class="comment">#线程就绪反馈函数</span></span><br><span class="line">        e.write(<span class="string">&quot;dir&quot;</span>)  <span class="comment">#执行</span></span><br><span class="line">        e.write(<span class="string">&quot;ping www.baidu.com&quot;</span>)</span><br><span class="line">        e.write(<span class="string">&quot;echo Hello!World 你好中国！你好世界！&quot;</span>)</span><br><span class="line">        e.write(<span class="string">&quot;exit&quot;</span>)</span><br><span class="line"></span><br><span class="line">    e = SwPipe(<span class="string">&quot;cmd.exe&quot;</span>,event,exit,ready)</span><br><span class="line">    e.start()</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
