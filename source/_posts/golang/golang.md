@@ -1,7 +1,7 @@
 ---
-title: golang
+title: Golang
 tags:
-  - golang
+  - Golang
 categories:
   - Golang
 date: 2021-05-19 11:22:12
